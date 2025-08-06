@@ -1,0 +1,71 @@
+﻿{
+  "Type": {
+    "TypeName": "DataModel",
+    "GenericParameters": null
+  },
+  "Expressions": [
+    {
+      "$type": "LinqlConstant",
+      "ConstantType": {
+        "TypeName": "LinqlSearch",
+        "GenericParameters": [
+          {
+            "TypeName": "DataModel",
+            "GenericParameters": null
+          }
+        ]
+      },
+      "Value": null,
+      "Next": {
+        "$type": "LinqlFunction",
+        "FunctionName": "Select",
+        "Arguments": [
+          {
+            "$type": "LinqlLambda",
+            "Parameters": [
+              {
+                "$type": "LinqlParameter",
+                "ParameterName": "r",
+                "Next": null
+              }
+            ],
+            "Body": {
+              "$type": "LinqlAnonymousObject",
+              "Properties": [
+                {
+                  "Value": {
+                    "$type": "LinqlParameter",
+                    "ParameterName": "r",
+                    "Next": {
+                      "$type": "LinqlProperty",
+                      "PropertyName": "Boolean",
+                      "Next": null
+                    }
+                  },
+                  "PropertyName": "Property1",
+                  "Next": null
+                },
+                {
+                  "Value": {
+                    "$type": "LinqlParameter",
+                    "ParameterName": "r",
+                    "Next": {
+                      "$type": "LinqlProperty",
+                      "PropertyName": "Decimal",
+                      "Next": null
+                    }
+                  },
+                  "PropertyName": "Property2",
+                  "Next": null
+                }
+              ],
+              "Next": null
+            },
+            "Next": null
+          }
+        ],
+        "Next": null
+      }
+    }
+  ]
+}
