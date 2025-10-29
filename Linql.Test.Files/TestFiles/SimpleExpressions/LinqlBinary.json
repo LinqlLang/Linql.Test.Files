@@ -1,7 +1,6 @@
 {
   "Type": {
-    "TypeName": "DataModel",
-    "GenericParameters": null
+    "TypeName": "DataModel"
   },
   "Expressions": [
     {
@@ -10,12 +9,10 @@
         "TypeName": "LinqlSearch",
         "GenericParameters": [
           {
-            "TypeName": "DataModel",
-            "GenericParameters": null
+            "TypeName": "DataModel"
           }
         ]
       },
-      "Value": null,
       "Next": {
         "$type": "LinqlFunction",
         "FunctionName": "Where",
@@ -25,8 +22,7 @@
             "Parameters": [
               {
                 "$type": "LinqlParameter",
-                "ParameterName": "r",
-                "Next": null
+                "ParameterName": "r"
               }
             ],
             "Body": {
@@ -37,8 +33,7 @@
                 "ParameterName": "r",
                 "Next": {
                   "$type": "LinqlProperty",
-                  "PropertyName": "Boolean",
-                  "Next": null
+                  "PropertyName": "Boolean"
                 }
               },
               "Right": {
@@ -49,17 +44,13 @@
                   "PropertyName": "OneToOne",
                   "Next": {
                     "$type": "LinqlProperty",
-                    "PropertyName": "Boolean",
-                    "Next": null
+                    "PropertyName": "Boolean"
                   }
                 }
-              },
-              "Next": null
-            },
-            "Next": null
+              }
+            }
           }
-        ],
-        "Next": null
+        ]
       }
     }
   ]

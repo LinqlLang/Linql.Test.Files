@@ -1,7 +1,6 @@
 {
   "Type": {
-    "TypeName": "DataModel",
-    "GenericParameters": null
+    "TypeName": "DataModel"
   },
   "Expressions": [
     {
@@ -10,12 +9,10 @@
         "TypeName": "LinqlSearch",
         "GenericParameters": [
           {
-            "TypeName": "DataModel",
-            "GenericParameters": null
+            "TypeName": "DataModel"
           }
         ]
       },
-      "Value": null,
       "Next": {
         "$type": "LinqlFunction",
         "FunctionName": "Where",
@@ -25,8 +22,7 @@
             "Parameters": [
               {
                 "$type": "LinqlParameter",
-                "ParameterName": "r",
-                "Next": null
+                "ParameterName": "r"
               }
             ],
             "Body": {
@@ -44,8 +40,7 @@
                       "Parameters": [
                         {
                           "$type": "LinqlParameter",
-                          "ParameterName": "s",
-                          "Next": null
+                          "ParameterName": "s"
                         }
                       ],
                       "Body": {
@@ -53,31 +48,23 @@
                         "BinaryName": "GreaterThan",
                         "Left": {
                           "$type": "LinqlParameter",
-                          "ParameterName": "s",
-                          "Next": null
+                          "ParameterName": "s"
                         },
                         "Right": {
                           "$type": "LinqlConstant",
                           "ConstantType": {
-                            "TypeName": "Int32",
-                            "GenericParameters": null
+                            "TypeName": "Int32"
                           },
-                          "Value": 0,
-                          "Next": null
-                        },
-                        "Next": null
-                      },
-                      "Next": null
+                          "Value": 0
+                        }
+                      }
                     }
-                  ],
-                  "Next": null
+                  ]
                 }
               }
-            },
-            "Next": null
+            }
           }
-        ],
-        "Next": null
+        ]
       }
     }
   ]

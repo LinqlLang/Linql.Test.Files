@@ -1,7 +1,6 @@
-﻿{
+{
   "Type": {
-    "TypeName": "DataModel",
-    "GenericParameters": null
+    "TypeName": "DataModel"
   },
   "Expressions": [
     {
@@ -10,12 +9,10 @@
         "TypeName": "LinqlSearch",
         "GenericParameters": [
           {
-            "TypeName": "DataModel",
-            "GenericParameters": null
+            "TypeName": "DataModel"
           }
         ]
       },
-      "Value": null,
       "Next": {
         "$type": "LinqlFunction",
         "FunctionName": "Select",
@@ -25,8 +22,7 @@
             "Parameters": [
               {
                 "$type": "LinqlParameter",
-                "ParameterName": "r",
-                "Next": null
+                "ParameterName": "r"
               }
             ],
             "Body": {
@@ -38,12 +34,10 @@
                     "ParameterName": "r",
                     "Next": {
                       "$type": "LinqlProperty",
-                      "PropertyName": "Boolean",
-                      "Next": null
+                      "PropertyName": "Boolean"
                     }
                   },
-                  "PropertyName": "Property1",
-                  "Next": null
+                  "PropertyName": "Property1"
                 },
                 {
                   "Value": {
@@ -51,24 +45,19 @@
                     "ParameterName": "r",
                     "Next": {
                       "$type": "LinqlProperty",
-                      "PropertyName": "Decimal",
-                      "Next": null
+                      "PropertyName": "Decimal"
                     }
                   },
-                  "PropertyName": "Property2",
-                  "Next": null
+                  "PropertyName": "Property2"
                 }
               ],
               "Next": {
                 "$type": "LinqlProperty",
-                "PropertyName": "Property1",
-                "Next": null
+                "PropertyName": "Property1"
               }
-            },
-            "Next": null
+            }
           }
-        ],
-        "Next": null
+        ]
       }
     }
   ]

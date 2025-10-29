@@ -1,0 +1,115 @@
+{
+  "Type": {
+    "TypeName": "DataModel"
+  },
+  "Expressions": [
+    {
+      "$type": "LinqlConstant",
+      "ConstantType": {
+        "TypeName": "LinqlSearch",
+        "GenericParameters": [
+          {
+            "TypeName": "DataModel"
+          }
+        ]
+      },
+      "Next": {
+        "$type": "LinqlFunction",
+        "FunctionName": "GroupBy",
+        "Arguments": [
+          {
+            "$type": "LinqlLambda",
+            "Parameters": [
+              {
+                "$type": "LinqlParameter",
+                "ParameterName": "r"
+              }
+            ],
+            "Body": {
+              "$type": "LinqlParameter",
+              "ParameterName": "r",
+              "Next": {
+                "$type": "LinqlProperty",
+                "PropertyName": "Boolean"
+              }
+            }
+          }
+        ],
+        "Next": {
+          "$type": "LinqlFunction",
+          "FunctionName": "Select",
+          "Arguments": [
+            {
+              "$type": "LinqlLambda",
+              "Parameters": [
+                {
+                  "$type": "LinqlParameter",
+                  "ParameterName": "r"
+                }
+              ],
+              "Body": {
+                "$type": "LinqlAnonymousObject",
+                "Properties": [
+                  {
+                    "Value": {
+                      "$type": "LinqlParameter",
+                      "ParameterName": "r",
+                      "Next": {
+                        "$type": "LinqlProperty",
+                        "PropertyName": "Key"
+                      }
+                    },
+                    "PropertyName": "key"
+                  },
+                  {
+                    "Value": {
+                      "$type": "LinqlConstant",
+                      "ConstantType": {
+                        "TypeName": "String"
+                      },
+                      "Value": ",",
+                      "Next": {
+                        "$type": "LinqlFunction",
+                        "FunctionName": "Join",
+                        "Arguments": [
+                          {
+                            "$type": "LinqlParameter",
+                            "ParameterName": "r",
+                            "Next": {
+                              "$type": "LinqlFunction",
+                              "FunctionName": "Select",
+                              "Arguments": [
+                                {
+                                  "$type": "LinqlLambda",
+                                  "Parameters": [
+                                    {
+                                      "$type": "LinqlParameter",
+                                      "ParameterName": "s"
+                                    }
+                                  ],
+                                  "Body": {
+                                    "$type": "LinqlParameter",
+                                    "ParameterName": "s",
+                                    "Next": {
+                                      "$type": "LinqlProperty",
+                                      "PropertyName": "String"
+                                    }
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    "PropertyName": "count"
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

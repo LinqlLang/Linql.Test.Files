@@ -1,0 +1,89 @@
+{
+  "Type": {
+    "TypeName": "DataModel"
+  },
+  "Expressions": [
+    {
+      "$type": "LinqlConstant",
+      "ConstantType": {
+        "TypeName": "LinqlSearch",
+        "GenericParameters": [
+          {
+            "TypeName": "DataModel"
+          }
+        ]
+      },
+      "Next": {
+        "$type": "LinqlFunction",
+        "FunctionName": "Where",
+        "Arguments": [
+          {
+            "$type": "LinqlLambda",
+            "Parameters": [
+              {
+                "$type": "LinqlParameter",
+                "ParameterName": "r"
+              }
+            ],
+            "Body": {
+              "$type": "LinqlSearch",
+              "Type": {
+                "TypeName": "DataModel"
+              },
+              "Expressions": [
+                {
+                  "$type": "LinqlConstant",
+                  "ConstantType": {
+                    "TypeName": "LinqlSearch",
+                    "GenericParameters": [
+                      {
+                        "TypeName": "DataModel"
+                      }
+                    ]
+                  }
+                }
+              ],
+              "Next": {
+                "$type": "LinqlFunction",
+                "FunctionName": "Select",
+                "Arguments": [
+                  {
+                    "$type": "LinqlLambda",
+                    "Parameters": [
+                      {
+                        "$type": "LinqlParameter",
+                        "ParameterName": "s"
+                      }
+                    ],
+                    "Body": {
+                      "$type": "LinqlParameter",
+                      "ParameterName": "s",
+                      "Next": {
+                        "$type": "LinqlProperty",
+                        "PropertyName": "Integer"
+                      }
+                    }
+                  }
+                ],
+                "Next": {
+                  "$type": "LinqlFunction",
+                  "FunctionName": "Contains",
+                  "Arguments": [
+                    {
+                      "$type": "LinqlParameter",
+                      "ParameterName": "r",
+                      "Next": {
+                        "$type": "LinqlProperty",
+                        "PropertyName": "Integer"
+                      }
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -1,7 +1,6 @@
 {
   "Type": {
-    "TypeName": "DataModel",
-    "GenericParameters": null
+    "TypeName": "DataModel"
   },
   "Expressions": [
     {
@@ -10,12 +9,10 @@
         "TypeName": "LinqlSearch",
         "GenericParameters": [
           {
-            "TypeName": "DataModel",
-            "GenericParameters": null
+            "TypeName": "DataModel"
           }
         ]
       },
-      "Value": null,
       "Next": {
         "$type": "LinqlFunction",
         "FunctionName": "Where",
@@ -25,8 +22,7 @@
             "Parameters": [
               {
                 "$type": "LinqlParameter",
-                "ParameterName": "r",
-                "Next": null
+                "ParameterName": "r"
               }
             ],
             "Body": {
@@ -35,8 +31,7 @@
               "Left": {
                 "$type": "LinqlObject",
                 "Type": {
-                  "TypeName": "DataModel",
-                  "GenericParameters": null
+                  "TypeName": "DataModel"
                 },
                 "Value": {
                   "Boolean": false,
@@ -59,14 +54,11 @@
                   "ListInteger": [],
                   "ListString": [],
                   "ListRecusrive": [],
-                  "ListNullableModel": [],
-                  "OneToOne": null,
-                  "OneToOneNullable": null
+                  "ListNullableModel": []
                 },
                 "Next": {
                   "$type": "LinqlProperty",
-                  "PropertyName": "Integer",
-                  "Next": null
+                  "PropertyName": "Integer"
                 }
               },
               "Right": {
@@ -74,16 +66,12 @@
                 "ParameterName": "r",
                 "Next": {
                   "$type": "LinqlProperty",
-                  "PropertyName": "Integer",
-                  "Next": null
+                  "PropertyName": "Integer"
                 }
-              },
-              "Next": null
-            },
-            "Next": null
+              }
+            }
           }
-        ],
-        "Next": null
+        ]
       }
     }
   ]
