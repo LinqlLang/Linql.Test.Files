@@ -63,12 +63,43 @@
                   },
                   {
                     "Value": {
-                      "$type": "LinqlParameter",
-                      "ParameterName": "r",
+                      "$type": "LinqlConstant",
+                      "ConstantType": {
+                        "TypeName": "String"
+                      },
+                      "Value": ",",
                       "Next": {
                         "$type": "LinqlFunction",
-                        "FunctionName": "Count",
-                        "Arguments": []
+                        "FunctionName": "Join",
+                        "Arguments": [
+                          {
+                            "$type": "LinqlParameter",
+                            "ParameterName": "r",
+                            "Next": {
+                              "$type": "LinqlFunction",
+                              "FunctionName": "Select",
+                              "Arguments": [
+                                {
+                                  "$type": "LinqlLambda",
+                                  "Parameters": [
+                                    {
+                                      "$type": "LinqlParameter",
+                                      "ParameterName": "s"
+                                    }
+                                  ],
+                                  "Body": {
+                                    "$type": "LinqlParameter",
+                                    "ParameterName": "s",
+                                    "Next": {
+                                      "$type": "LinqlProperty",
+                                      "PropertyName": "String"
+                                    }
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
                       }
                     },
                     "PropertyName": "count"
